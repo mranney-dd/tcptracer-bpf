@@ -25,6 +25,12 @@ userspace by the Go library using a state machine.
 
 See `tests/tracer.go` for an example how to use tcptracer-bpf.
 
+When running under Docker, use the following flags:
+
+```
+docker run --pid=host -v /sys/kernel/debug:/sys/kernel/debug --privileged <rest of flags>
+```
+
 ## Build the elf object
 
 ```
@@ -40,6 +46,7 @@ cd tests
 make
 sudo ./run
 ```
+
 
 ## Vendoring
 
